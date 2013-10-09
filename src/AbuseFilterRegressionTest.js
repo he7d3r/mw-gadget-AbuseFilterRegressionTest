@@ -250,7 +250,7 @@ function modifyInterface(){
 }
 
 if ( mw.config.get( 'wgCanonicalSpecialPageName' ) === 'AbuseFilter'
-	&& /\/test$/.test( mw.config.get( 'wgTitle' ) )
+	&& /\/test(?:\/\d+)?$/.test( mw.config.get( 'wgTitle' ) )
 ) {
 	mw.loader.using( [
 			'mediawiki.api',
