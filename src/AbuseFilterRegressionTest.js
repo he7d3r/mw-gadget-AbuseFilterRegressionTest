@@ -104,7 +104,7 @@ function getListItem( log ){
 				title: 'Special:Contribs/' + log.user
 			} )
 			.text( mw.msg( 'afrt-contribs' ) ),
-		')',
+		' | ',
 		$( '<a>' )
 			.attr( {
 				href: mw.util.wikiGetlink( 'Special:AbuseLog', { wpSearchUser: log.user } ),
