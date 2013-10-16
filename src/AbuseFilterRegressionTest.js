@@ -24,6 +24,8 @@ mw.messages.set( {
 	'afrt-talkpage': 'discussão',
 	// [[MediaWiki:Contribslink]]
 	'afrt-contribs': 'contribs',
+	'afrt-filter-logs': 'registros dos filtros',
+	'afrt-filter-logs-title': 'Registro do filtro de edições para este usuário',
 	'afrt-load-more': 'Carregar mais',
 	'afrt-error-badsyntax' : 'Erro de sintaxe',
 	'afrt-error-permissiondenied' : 'Permissão negada',
@@ -102,6 +104,13 @@ function getListItem( log ){
 				title: 'Special:Contribs/' + log.user
 			} )
 			.text( mw.msg( 'afrt-contribs' ) ),
+		')',
+		$( '<a>' )
+			.attr( {
+				href: mw.util.wikiGetlink( 'Special:AbuseLog', { wpSearchUser: log.user } ),
+				title: mw.msg( 'afrt-filter-logs-title' )
+			} )
+			.text( mw.msg( 'afrt-filter-logs' ) ),
 		')'
 		//, '<br />', JSON.stringify( log )
 	);
