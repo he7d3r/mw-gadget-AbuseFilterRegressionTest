@@ -49,14 +49,14 @@ function getListItem( log ){
 		' (',
 		$( '<a>' )
 			.attr( {
-				href: mw.util.wikiGetlink( 'Special:AbuseLog/' + log.id ),
+				href: mw.util.getUrl( 'Special:AbuseLog/' + log.id ),
 				title: 'Special:AbuseLog/' + log.id
 			} )
 			.text( mw.msg( 'afrt-details' ) ),
 		' | ',
 		$( '<a>' )
 			.attr( {
-				href: mw.util.wikiGetlink(
+				href: mw.util.getUrl(
 					'Special:AbuseFilter/examine/log/' + log.id, {
 						testfilter: $( '#wpTestFilter' ).val()
 					}
@@ -67,7 +67,7 @@ function getListItem( log ){
 		'): ',
 		$( '<a>' )
 			.attr( {
-				href: mw.util.wikiGetlink( log.title ),
+				href: mw.util.getUrl( log.title ),
 				title: log.title
 			} )
 			.text( log.title ),
@@ -76,7 +76,7 @@ function getListItem( log ){
 		// ' | ',
 		$( '<a>' )
 			.attr( {
-				href: mw.util.wikiGetlink( log.title ) + '?action=history',
+				href: mw.util.getUrl( log.title ) + '?action=history',
 				title: log.title
 			} )
 			.text( mw.msg( 'afrt-hist' ) ),
@@ -85,7 +85,7 @@ function getListItem( log ){
 		' ',
 		$( '<a>' )
 			.attr( {
-				href: mw.util.wikiGetlink( 'User:' + log.user ),
+				href: mw.util.getUrl( 'User:' + log.user ),
 				title: 'User:' + log.user
 			} )
 			.addClass( 'mw-userlink' )
@@ -93,21 +93,21 @@ function getListItem( log ){
 		' (',
 		$( '<a>' )
 			.attr( {
-				href: mw.util.wikiGetlink( 'User talk:' + log.user ),
+				href: mw.util.getUrl( 'User talk:' + log.user ),
 				title: 'User talk:' + log.user
 			} )
 			.text( mw.msg( 'afrt-talkpage' ) ),
 		' | ',
 		$( '<a>' )
 			.attr( {
-				href: mw.util.wikiGetlink( 'Special:Contribs/' + log.user ),
+				href: mw.util.getUrl( 'Special:Contribs/' + log.user ),
 				title: 'Special:Contribs/' + log.user
 			} )
 			.text( mw.msg( 'afrt-contribs' ) ),
 		' | ',
 		$( '<a>' )
 			.attr( {
-				href: mw.util.wikiGetlink( 'Special:AbuseLog', { wpSearchUser: log.user } ),
+				href: mw.util.getUrl( 'Special:AbuseLog', { wpSearchUser: log.user } ),
 				title: mw.msg( 'afrt-filter-logs-title' )
 			} )
 			.text( mw.msg( 'afrt-filter-logs' ) ),
