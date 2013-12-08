@@ -29,7 +29,7 @@ mw.messages.set( {
 	'afrt-load-more': 'Carregar mais',
 	'afrt-error-badsyntax' : 'Erro de sintaxe',
 	'afrt-error-permissiondenied' : 'Permissão negada',
-	'afrt-error-nosuchlogid' : 'Não foi encontrado o registro $1.',
+	'afrt-error-nosuchlogid' : 'Não foi encontrado o registro $1.'
 } );
 
 var batchSize = 100,
