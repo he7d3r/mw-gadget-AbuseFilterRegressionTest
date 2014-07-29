@@ -154,7 +154,7 @@ function showLogs( logs ){
 			}
 		} )
 		.fail( function( error ) {
-			if ( error === 'badsyntax' || error === 'permissiondenied' ) {
+			if ( $.inArray(error, ['badsyntax' , 'permissiondenied' ]) !== -1) {
 				$( '#mw-content-text' ).append(
 					$( '<p>' ).text( mw.msg( 'afrt-error-' + error ) )
 				);
