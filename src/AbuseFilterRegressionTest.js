@@ -249,7 +249,7 @@ function modifyInterface(){
 		if ( id ){
 			e.preventDefault();
 			$( this ).prop( 'disabled', true );
-			$( 'fieldset' )
+			$( 'fieldset' ).last()
 				.nextAll().remove().end()
 				.after( '<ol id="log-list">' );
 			$( '#mw-content-text' ).injectSpinner( 'afrt-spinner' );
