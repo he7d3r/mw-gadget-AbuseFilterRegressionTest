@@ -221,7 +221,8 @@
 			list: 'abuselog',
 			aflfilter: filter,
 			afllimit: batchSize,
-			aflprop: 'ids|filter|user|title|action|result|timestamp|hidden|revid'
+			aflprop: 'ids|filter|user|title|action|result|timestamp|hidden|revid',
+			rawcontinue: 1
 		};
 		api = new mw.Api();
 		getLogBatch();
