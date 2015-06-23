@@ -264,7 +264,6 @@
 			[
 				'mediawiki.api',
 				'mediawiki.util',
-				'jquery.mwExtension',
 				'jquery.spinner'
 			],
 			function () {
